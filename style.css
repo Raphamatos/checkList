@@ -1,7 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap");
-
 
 * {
   font-family: "Sanchez", sans-serif;
@@ -14,34 +12,144 @@
 :root {
   --var-white-color: #fafafa;
   --var-dark-color: #0e0e0e;
-  --var-one-color: ;
-  --var-two-color: ;
-
+  --var-grey-color: #ccc;
+  --var-one-color: #138007;
+  --var-two-color: #d40e0e;
+  --var-three-color: #21800757;
+  --var-four-color: #3d3d3d;
 }
-body{
-    background: linear-gradient(#ff00bf,#7700ff);
-    height: 100%;
-    width: 100%;
+body {
+  background-image: linear-gradient(#180ed4, #0ed4d1);
+  min-height: 100vh;
+  width: 100%;
 }
 
 footer#copyRight {
-    background-color: var(--var-white-color);
-    color: var(--var-dark-color);
-    font-size: 85%;
-    width: 100%;
-    font-style: none;
-    display: flex;
-    padding: 1rem 10%;
-    justify-content: center;
-    text-align: center;
-  }
+  background-color: var(--var-white-color);
+  color: var(--var-dark-color);
+  font-size: 85%;
+  width: 100%;
+  font-style: none;
+  display: flex;
+  padding: 1rem 10%;
+  justify-content: center;
+  text-align: center;
+}
 
-  
-  main{
-    height: 100vh;
-    text-align: center;
-  }
-  h1{
-    font-size: 5vh;
-  }
-  header
+main {
+  border-radius: 5px;
+  background-color: var(--var-white-color);
+  padding: 1rem;
+  align-items: center;
+  margin: 5% auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  color: var(--var-white-color);
+  text-align: center;
+  margin: 1rem 0 0 0;
+  font-size: 9vh;
+  text-shadow: -1px 0 var(--var-dark-color),  
+  0 1px var(--var-dark-color),
+    1px 0 var(--var-dark-color), 
+    0 -1px var(--var-dark-color);
+}
+input {
+  box-shadow: 0 0 5px var(--var-grey-color);
+  border: none;
+  height: 3rem;
+  font-size: 1em;
+  width: 80%;
+  border-radius: 5px 0 0 5px;
+  padding-left: 10%;
+}
+input:focus{
+outline: 2px solid var(--var-grey-color);
+}
+button.add {
+  width: 20%;
+  color: var(--var-white-color);
+  cursor: pointer;
+  background-color: var(--var-one-color);
+  font-weight: bold;
+  border: none;
+  height: 3rem;
+  border-radius: 0 10px 10px 0;
+}
+
+#zone-list {
+  display: none;
+  align-items: center;
+  margin: auto auto;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 3rem;
+}
+.item {
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--var-grey-color);
+  border-radius: 5px;
+  margin: 1% 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--var-white-color);
+  width: 100%;
+}
+
+.item-icon {
+  flex: 10%;
+
+  text-align: center;
+  font-size: 1em;
+}
+.item-name {
+  font-size: 1em;
+  font-weight: bold;
+
+  flex: 70%;
+}
+.item-button {
+  border-radius: 5px;
+  flex: 20%;
+  height: 100%;
+}
+.delet {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--var-two-color);
+  color: var(--var-white-color);
+  border: none;
+  padding: 0.825em;
+  width: 100%;
+}
+.delet i,
+.btn-add i {
+  font-size: 1em;
+  margin-right: 0.825em;
+}
+.fa-circle-check {
+  color: var(--var-one-color);
+}
+
+.item.clicked {
+  background-color: var(--var-three-color);
+}
+.item.clicked .item-name {
+  color: var(--var-four-color);
+  text-decoration: line-through;
+}
+
+@media (max-width: 563px) {
+  .delet i,
+.btn-add i {
+  margin-right: 0;
+}
+}
