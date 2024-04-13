@@ -112,7 +112,6 @@ button.add {
 .item-name {
   font-size: 1em;
   font-weight: bold;
-
   flex: 70%;
 }
 .item-button {
@@ -148,8 +147,35 @@ button.add {
 }
 
 @media (max-width: 563px) {
+  h1{
+    font-size: 7vh;
+  }
   .delet i,
 .btn-add i {
   margin-right: 0;
 }
 }
+@media (max-width: 418px){
+  .item-icon{
+    font-size: 0.825em;
+  }
+.item-name{
+  font-size: 0.825rem;
+  flex: 65%;
+  padding: 0.25rem;
+}
+
+.delet{
+  padding: 2%;
+}
+
+#btn-add, .delet{
+ color: transparent;
+}
+.add i, .delet i{
+  font-size: 1.25rem;
+  color: var(--var-white-color);
+  transform: translateY(50%);
+}
+}
+
